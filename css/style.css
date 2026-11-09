@@ -896,7 +896,21 @@ textarea { min-height: 96px; resize: vertical; }
   h1 { font-size: 2.05rem; }
   h2 { font-size: 1.7rem; }
   .lead { font-size: 16px; }
-  .hero { padding: 28px 0 36px; }
+  .hero { padding: 24px 0 20px; }
+  .hero__grid { gap: 22px; }
+  .hero__actions { margin: 20px 0 12px; }
+  .ticket {
+    background: var(--paper);
+    filter: none;
+    box-shadow: 0 14px 30px rgba(16, 40, 31, 0.16);
+  }
+  .stats { margin: 22px 0 0; }
+  .marquee { margin-top: 22px; }
+  #areas { display: none; }
+  .section { padding: 36px 0; }
+  .section__head { margin-bottom: 18px; }
+  .card, .step, .calc, .rules__main, .rules__side { padding: 18px; }
+  .audience, .steps, .split, .rules { gap: 12px; }
   .hero__hours { max-width: none; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn, .band .btn { width: 100%; }
