@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Замените домен на боевой перед публикацией.
+Sitemap: https://trueflashh.github.io/yu-kuban/sitemap.xml
