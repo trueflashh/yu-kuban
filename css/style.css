@@ -22,7 +22,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   margin: 0;
@@ -33,6 +36,11 @@ body {
   background:
     radial-gradient(circle at 1px 1px, rgba(20, 33, 27, 0.045) 1px, transparent 0) 0 0 / 18px 18px,
     var(--bg);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, label, summary, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
 img, svg { max-width: 100%; }
@@ -284,16 +292,24 @@ h3 { margin: 0 0 10px; font-size: 1.35rem; line-height: 1.25; }
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.55), transparent 62%);
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.28);
   opacity: 0;
-  transform: scale(0.2);
   pointer-events: none;
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition: opacity 0.4s ease;
 }
 
 @media (hover: hover) {
   .btn:hover { transform: translateY(-1px); }
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: none;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px #d6ef6a;
 }
 
 .btn:active {
@@ -302,7 +318,6 @@ h3 { margin: 0 0 10px; font-size: 1.35rem; line-height: 1.25; }
 
 .btn:active::after {
   opacity: 1;
-  transform: scale(1);
   transition: none;
 }
 
@@ -859,9 +874,21 @@ textarea { min-height: 96px; resize: vertical; }
 .dock .btn { flex: 1; box-shadow: var(--shadow); }
 .dock .btn--ghost { background: var(--paper); color: var(--ink); border-color: transparent; }
 
-:focus-visible {
-  outline: 3px solid #b6d63a;
-  outline-offset: 2px;
+.btn:focus-visible,
+.chips button:focus-visible,
+.nav a:focus-visible,
+.faq summary:focus-visible,
+.zone-list button:focus-visible,
+.mode label:focus-visible {
+  outline: none;
+}
+
+.chips button:focus-visible,
+.nav a:focus-visible,
+.faq summary:focus-visible,
+.zone-list button:focus-visible,
+.mode label:focus-visible {
+  box-shadow: 0 0 0 3px #d6ef6a;
 }
 
 @media (max-width: 980px) {
