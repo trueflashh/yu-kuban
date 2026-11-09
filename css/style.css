@@ -502,6 +502,7 @@ tr.group th {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  padding: 12px 20px;
 }
 
 .num {
@@ -1009,19 +1010,26 @@ textarea { min-height: 96px; resize: vertical; }
 
   #price-table tr.group {
     display: block;
-    margin: 18px 0 8px;
+    margin: 8px 0 10px;
     padding: 0;
     border: 0;
     background: transparent;
   }
 
   #price-table tr.group th {
-    display: block;
-    padding: 0;
-    background: transparent;
-    color: var(--green-2);
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 6px 2px 0;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #e7f2ea;
+    color: var(--green);
+    font-family: var(--sans);
     font-size: 12px;
-    letter-spacing: 0.12em;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
     text-transform: uppercase;
   }
 }
